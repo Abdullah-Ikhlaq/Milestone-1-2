@@ -1,0 +1,310 @@
+body {
+  font-family:'Times New Roman', Times, serif; 
+  /* background-color: #ffffff; */
+  color: rgb(7, 7, 7);
+  overflow-x: hidden;
+  background-color: #0e0d0d;
+}
+
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+
+.personal-info {
+  width: 40%;
+  /* height: 900px; */
+  background-color: #000000;
+  /* padding-right: 5px; */
+}
+
+.image {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.name {
+  /* color: #3A6D8C; */
+  text-align: center;
+  font-size: 45px;
+  margin: 5px 0 5px 0;
+}
+
+.icons {
+  color: #5db7f0;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  
+
+}
+.details span{
+  margin-left: 4px;
+  font-weight: 300;
+  font-size: medium;
+}
+
+.details {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.div-container {
+  position: relative; /* Needed for positioning the ::after element */
+  padding-bottom: 30px; /*Optional: space between the div and the line*/
+}
+
+.div-container::after {
+  content: ""; /* Required to create the pseudo-element */
+  display: block;
+  width: 240px; /* Set the width of the line */
+  height: 2px; /* Set the height (thickness) of the line */
+  background-color: rgb(243, 235, 235); /* Line color */
+  margin: 0 auto; /* Center the line */
+  margin-top: 10px; /* Space between the div and the line */
+}
+
+.skills {
+  margin: 5px;
+  font-size: 30px;
+  text-align: center;
+  /* padding: 0%; */
+}
+
+.skills.hidden {
+  border: none;
+}
+
+.skill-name {
+  width: 100%;
+  height: auto;
+  padding-left: 15%;
+  margin-bottom: 20px;
+  color: white;
+}
+.personal-info h1 {
+  color: #feffff;
+}
+.personal-info h2 {
+  color: #ffffff;
+}
+.details span {
+  color: rgb(253, 253, 253);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-right: 20px;
+}
+.details i {
+  align-self: flex-end;
+  margin-bottom: 5px;
+}
+
+.work {
+  width: 60%;
+  /* height: 900px; */
+  position: relative;
+  background-color: white;
+  /* margin: 20px; */
+}
+
+.work::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 50%;
+  background-color: #001f3f;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+}
+
+.work::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 30px;
+  background-color: #001f3f;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
+}
+
+.work {
+  margin: 0 0 0 30px;
+}
+
+.work h2 {
+  
+  width: 80%;
+  padding: 10px 0 15px 20px;
+  border-bottom: 2.5px solid #001f3f; /* Solid bottom border */
+  position: relative; /* Allow absolute positioning for the shadow */
+  color: #001f3f;
+  font-size: xx-large;
+}
+
+.work h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Position below the border */
+  width: 100%;
+  height: 3px; /* Height of the shadow effect */
+  background-color: #001f3f; /* Shadow color with transparency */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Additional shadow for depth */
+}
+.hidden {
+  display: none;
+}
+
+.work p {
+  text-align: justify;
+  margin-right: 35px;
+}
+.summary{
+  color: #050505;
+}
+#toggle-summary {
+  margin-top: 55px;
+}
+.personal-info,
+.work {
+  flex-grow: 1;
+}
+button {
+  margin: 20px 0 0 20px;
+  padding: 7px 12px;
+  background-color: #001f3f;
+  color: white;
+  border: 1px solid #060607;
+  cursor: pointer;
+  border-radius: 5px 5px 5px 5px;
+}
+
+button:hover {
+  background-color: #f6f6f8;
+  color: #001f3f;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .personal-info,
+  .work {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .name {
+    font-size: 35px;
+  }
+
+  .skills,
+  .skill-name {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .details span {
+    font-size: 16px;
+    padding-right: 10px;
+  }
+
+  button {
+    margin: 10px 0;
+    width: 50%;
+    padding: 10px;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+  .work p {
+    padding: 15px;
+  }
+
+  .work::after,
+  .work::before {
+    display: none;
+  }
+}
+
+
+#resume-form {
+  background-color: #5cc2fd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  margin: auto;
+}
+
+#resume-form h2 {
+  color: #000000;
+  border-bottom: 1px solid #34495e;
+  padding-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin: 15px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+input[type="file"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #34495e;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+  border-color: #010103;
+  outline: none;
+  background-color: #bdc3c7;
+}
+
+
+
+#profile-pic-preview {
+  display: none;
+  width: 100px;
+  height: auto;
+  margin-top: 15px;
+}
+
+
+.save-edit{
+  width: 200px;
+  height: 30px;
+  margin: 10px;
+  margin-left: 100px;
+  align-items: center;
+}
